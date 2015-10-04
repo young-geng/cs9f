@@ -26,3 +26,7 @@
 *.exe
 *.out
 *.app
+
+# OS X clang file
+*.dSYM/
+
