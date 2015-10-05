@@ -30,3 +30,4 @@
 # OS X clang file
 *.dSYM/
 
+.DS_Store
