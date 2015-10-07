@@ -15,6 +15,7 @@ clean:
 	@rm -rf adding_machine adding_machine.o
 
 check: adding_machine test/test.in.txt test/test.out.txt
-	@test -z "`./adding_machine < test/test.in.txt | diff test/test.out.txt -)`"
+	@test -z "`./adding_machine < test/test.in.txt | diff test/test.out.txt -`"
+	@echo 'All test passed!'
 
 .PHONY: clean all check
