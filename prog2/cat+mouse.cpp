@@ -48,7 +48,7 @@ void RunChase (Position &cat, Position &mouse) {
         } else {
             cat.IncrementPosition(0, 1.25);
         }
-        mouse.IncrementPosition(0, 1);
+        
         if (verbose) {
             cout << "Time:  " << i << endl;
             cout << "Cat:  ";
@@ -62,6 +62,7 @@ void RunChase (Position &cat, Position &mouse) {
             cout << "The cat caught the mouse at step " << i << endl;
             return;
         }
+        mouse.IncrementPosition(0, 1);
     }
     cout << "The mouse escaped" << endl;
 }
