@@ -15,8 +15,9 @@ void InterpretCommands (istream& cmds) {
   string line, lineInWord;
   while (!getline(cin, line).eof()) {
     istringstream lineIn (line);
-    if ( ________ ) {
-      ________ ;
+    lineIn >> lineInWord;
+    if ( lineIn.fail() ) {
+      cerr << "Read line failed!" ;
     } else if (lineInWord == "update") {
       InterpretUpdate (lineIn);
     } else if (lineInWord == "list") {
@@ -29,6 +30,19 @@ void InterpretCommands (istream& cmds) {
       cerr << "Unrecognizable command word." << endl; 
     }
   }
+}
+
+void InterpretUpdate (istream&) {
+  cout << "Command get!" << endl;
+}
+void InterpretList (istream&) {
+  cout << "Command get!" << endl;
+}
+void InterpretBatch (istream&) {
+  cout << "Command get!" << endl;
+}
+void InterpretQuit (istream&) {
+  cout << "Command get!" << endl;
 }
 
 int main ( ) {

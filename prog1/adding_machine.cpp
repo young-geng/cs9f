@@ -5,7 +5,7 @@ using std::cout;
 using std::endl;
 
 
-int main() {
+int main(int argc, char *argv[]) {
     int total = 0, subtotal = 0, temp;
     bool flag = false;
     while (!cin.eof()) {
