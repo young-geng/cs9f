@@ -17,10 +17,10 @@ clean:
 
 
 test1: cat+mouse test/test1.in.txt test/test1.out.txt
-	@test -z "`./cat+mouse -q < test/test1.in.txt | diff test/test1.out.txt -)`"
+	@test -z "`./cat+mouse -q < test/test1.in.txt | diff test/test1.out.txt -`"
 
 test2: cat+mouse test/test2.in.txt test/test2.out.txt
-	@test -z "`./cat+mouse -q < test/test2.in.txt | diff test/test2.out.txt -)`"
+	@test -z "`./cat+mouse -q < test/test2.in.txt | diff test/test2.out.txt -`"
 
 
 check: test1 test2
