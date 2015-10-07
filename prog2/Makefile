@@ -15,11 +15,15 @@ cat+mouse: cat+mouse.o positions.o
 clean:
 	rm -f positions.o cat+mouse.o cat+mouse
 
-test1: cat+mouse test1.in
-	./cat+mouse < test1.in
 
-test2: cat+mouse test2.in
-	./cat+mouse < test2.in
+test1: cat+mouse test1.in.txt test1.out.txt
+	@test -z "`./cat+mouse -q < test1.in.txt | diff test1.out.txt -)`"
 
-.PHONY: all clean test1 test2
+test2: cat+mouse test2.in.txt test2.out.txt
+	@test -z "`./cat+mouse -q < test2.in.txt | diff test2.out.txt -)`"
+
+
+test: test1 test2
+
+.PHONY: all clean test test1 test2
 
