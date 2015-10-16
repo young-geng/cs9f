@@ -1,0 +1,13 @@
+Amos McCoy
+|-->mom/dad
+    |-->Wilma
+    |-->Fred
+    |-->me
+        |-->Marge
+        |   |-->Hilary
+        |   |-->Bill
+        |-->Homer
+        |-->Mike
+            |-->Lisa
+            |-->Bart
+ 
