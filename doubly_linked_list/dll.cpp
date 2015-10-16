@@ -9,7 +9,7 @@ using namespace std;
 DLLnode::DLLnode (int k) {
     myValue = k;
     myPrevious = myNext = this;   // start off with null links
-	                          // that eventually will be replaced
+                              // that eventually will be replaced
 }
 
 // Return the successor of the given node.
@@ -33,24 +33,33 @@ DLLnode *DLLnode::Previous () {
 // Insert the node pointed to by ptr at the head of list
 // and return a pointer to new element.
 DLLnode *DLLnode::Insert (DLLnode *ptr) {
-    // you fill this in
+    myPrevious->myNext = ptr;
+    ptr->myPrevious = myPrevious;
+    ptr->myNext = this;
+    myPrevious = ptr;
+    return ptr;
 }
 
 // Delete the first node from the list and return pointer to its
 // successor, or 0 if there was only one element in the list to
 // start with. Precondition: this != 0.
 DLLnode *DLLnode::Delete () {
-    // you fill this in
+    if (myNext == this) {
+        return nullptr;
+    }
+    myPrevious->myNext = myNext;
+    myNext->myPrevious = myPrevious;
+    return myNext;
 }
 
 // Print the list.
 void DLLnode::Print () {
     if (this != 0) {
-	DLLnode *temp = this;
-	do {
-	    cout << temp->myValue << " ";
-	    temp = temp->myNext;
-	} while (temp != this);
+        DLLnode *temp = this;
+        do {
+            cout << temp->myValue << " ";
+            temp = temp->myNext;
+        } while (temp != this);
     }
     cout << endl;
 }
@@ -58,14 +67,14 @@ void DLLnode::Print () {
 // Return true if the list contains exactly 1 element.
 bool DLLnode::LengthIs1 () {
     if (this == 0) {
-	return false;
+        return false;
     } else if (this == myPrevious) {
-	assert (myNext == myPrevious);    // consistency check on 1-elem list
-	return true;
+        assert (myNext == myPrevious);    // consistency check on 1-elem list
+        return true;
     } else if (this == myNext) {
-	assert (false);               // failed consistency check!
+        assert (false);               // failed consistency check!
     } else {
-	return false;
+        return false;
     }
 }
 
