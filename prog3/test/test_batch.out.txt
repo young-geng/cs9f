@@ -1,0 +1,6 @@
+AppleII :  10
+PC/AT :  9
+VT100 :  4
+VT100 :  4
+PC/AT :  9
+AppleII :  10

@@ -1,0 +1,9 @@
+update PC/AT 19
+update AppleII 20
+update AppleII -10
+update VT100 4
+update PC/AT -10
+list names
+list quantities
+quit
+list names

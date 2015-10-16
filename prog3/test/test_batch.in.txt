@@ -1,0 +1,2 @@
+batch test/test_batch_commands.txt
+list names
