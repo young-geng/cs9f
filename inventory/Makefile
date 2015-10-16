@@ -2,10 +2,10 @@ SHELL := /bin/bash
 CXX := g++
 CXXFLAGS := -std=c++11 -g -Wall
 
-EXECUTABLE := ./p3.1
+EXECUTABLE := p3.1
 TEST_IN_FILE := test/TEST_NAME.in.txt
 TEST_OUT_FILE := test/TEST_NAME.out.txt
-TEST_COMMAND := test -z "`$(EXECUTABLE) < $(TEST_IN_FILE) 2>&1 | diff $(TEST_OUT_FILE) -`"
+TEST_COMMAND := test -z "`./$(EXECUTABLE) < $(TEST_IN_FILE) 2>&1 | diff $(TEST_OUT_FILE) -`"
 
 
 all: p3.1

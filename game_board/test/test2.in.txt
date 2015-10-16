@@ -1,0 +1,12 @@
+print 1
+set 0 0 0 x
+set 0 1 1 y
+set 1 0 0 g
+set 1 0 0 x
+set 0 0 0 F
+set 0 3 3 P
+set 0 3 0 T
+set 1 0 3 L
+print 0
+print 1
+quit
