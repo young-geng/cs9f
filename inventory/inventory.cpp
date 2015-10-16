@@ -34,7 +34,7 @@ vector<Entry> Inventory::ListByName() {
 }
 
 vector<Entry> Inventory::ListByQuantity() {
-    auto v = ListByName();
+    vector<Entry>&& v = ListByName();
     sort(v.begin(), v.end(), EntryQuantityLess);
     return v;
 }

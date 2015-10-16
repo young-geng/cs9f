@@ -39,10 +39,10 @@ test_inventory: $(EXECUTABLE) $(subst, TEST_NAME, $@, $(TEST_IN_FILE)) $(subst, 
 	@echo '$@ passed'
 
 
-test: test_blank test_wrong_command test_batch test_inventory
+check: test_blank test_wrong_command test_batch test_inventory
 	@echo "All test passed!"
 
 clean:
 	@rm -rf p3.1.o $(EXECUTABLE) inventory.o
 
-.PHONY: all clean test test_blank test_wrong_command test_batch test_inventory
+.PHONY: all clean check test_blank test_wrong_command test_batch test_inventory

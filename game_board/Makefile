@@ -26,10 +26,10 @@ test2: $(EXECUTABLE) $(subst, TEST_NAME, $@, $(TEST_IN_FILE)) $(subst, TEST_NAME
 	@echo '$@ passed'
 
 
-test: test1 test2
+check: test1 test2
 	@echo 'All test passed!'
 
 clean:
 	@rm -rf board.o $(EXECUTABLE)
 
-.PHONY: clean test test1 test2
+.PHONY: clean check test1 test2

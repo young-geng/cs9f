@@ -3,6 +3,7 @@
 #include <string>
 #include <cstdlib>
 #include <array>
+#include <memory>
 
 #include "board.h"
 
@@ -52,7 +53,7 @@ int main(int argc, char *argv[]) {
     if (argc == 2 && string(argv[1]) == "-p")
         prompt = true;
 
-    Board<5> board;
+    shared_ptr<Board<5>> board(new Board<5>());
 
     string line, lineInWord;
     int player, row, col;
@@ -71,14 +72,14 @@ int main(int argc, char *argv[]) {
                 cout << "Wrong command!" << endl;
                 continue;
             }
-            board.SetCell(player, row, col, c);
+            board->SetCell(player, row, col, c);
         } else if (lineInWord == "print") {
             lineIn >> player;
             if (lineIn.fail()) {
                 cout << "Wrong command!" << endl;
                 continue;
             }
-            board.Print(player);
+            board->Print(player);
 
         } else if (lineInWord == "quit") {
             exit(0);
