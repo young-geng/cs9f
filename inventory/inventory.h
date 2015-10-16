@@ -10,12 +10,12 @@ typedef std::pair<std::string, int> Entry;
 
 class Inventory {
  public:
-	Inventory ();
-	void Update (std::string item, int amount);
-	std::vector<Entry> ListByName ();
-	std::vector<Entry> ListByQuantity ();
+    Inventory ();
+    void Update (std::string item, int amount);
+    std::vector<Entry> ListByName ();
+    std::vector<Entry> ListByQuantity ();
  private:
-	std::map<std::string, int> table;
+    std::map<std::string, int> table;
 };
 
 #endif

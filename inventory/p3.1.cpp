@@ -5,12 +5,13 @@
 #include <cstdlib>
 #include <vector>
 #include <utility>
+#include <memory>
 
 #include "inventory.h"
 
 using namespace std;
 
-Inventory inventory;
+shared_ptr<Inventory> inventory;
 
 void InterpretCommands (istream&, bool);
 void InterpretUpdate (istream&);
@@ -52,8 +53,9 @@ void InterpretUpdate (istream& lineIn) {
     cerr << "Unrecognizable command args." << endl; 
     return;
   }
-  inventory.Update(name, number);
+  inventory->Update(name, number);
 }
+
 void InterpretList (istream& lineIn) {
   string target;
   lineIn >> target;
@@ -62,17 +64,18 @@ void InterpretList (istream& lineIn) {
     return;
   }
   if (target == "names") {
-    auto v = inventory.ListByName();
+    auto v = inventory->ListByName();
     for (auto iter = v.begin(); iter != v.end(); iter++) {
       cout << iter->first << " :  " << iter->second << endl;
     }
   } else {
-    auto v = inventory.ListByQuantity();
+    auto v = inventory->ListByQuantity();
     for (auto iter = v.begin(); iter != v.end(); iter++) {
       cout << iter->first << " :  " << iter->second << endl;
     }
   }
 }
+
 void InterpretBatch (istream& lineIn) {
   string filename;
   lineIn >> filename;
@@ -87,6 +90,7 @@ void InterpretBatch (istream& lineIn) {
   }
   InterpretCommands(fin, false);
 }
+
 void InterpretQuit (istream& lineIn) {
   if (!lineIn.eof()) {
     cerr << "Unrecognizable command args." << endl;
@@ -95,7 +99,8 @@ void InterpretQuit (istream& lineIn) {
   exit(0);
 }
 
-int main ( ) {
+int main () {
+  inventory.reset(new Inventory());
   InterpretCommands (cin);
   return 0;
 }

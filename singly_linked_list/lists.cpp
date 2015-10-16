@@ -25,7 +25,7 @@ ListNode::~ListNode () {
 void ListNode::Print () {
     ListNode* list = this;
     for (; list; list = list->Rest()) {
-	cout << list->First() << " ";
+        cout << list->First() << " ";
     }
     cout << endl;
 }

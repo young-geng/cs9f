@@ -7,7 +7,7 @@ ListNode* FromInput (istream &is) {
     int k;
     ListNode* head = 0;
     while (is >> k) {
-	head = new ListNode (k, head);
+        head = new ListNode (k, head);
     }
     return head;
 }
@@ -16,7 +16,7 @@ int main () {
     ListNode* list = FromInput (cin);
     list->Print ();
     if (list) {
-	delete list;
+        delete list;
     }
     return 0;
 }
