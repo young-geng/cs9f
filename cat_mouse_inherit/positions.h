@@ -30,7 +30,7 @@ public:
 
 	// Print this position.
 	void Print ();
-	friend std::ostream& operator<< (std::ostream &out, Position &pos);
+	friend std::ostream& operator<< (std::ostream &out, const Position &pos);
 
 	// Return true if someone at this position can see someone 
 	// or something at the argument position (i.e. the statue 
@@ -57,7 +57,7 @@ private:
 };
 
 
-std::ostream& operator<< (std::ostream &out, Position &pos);
+std::ostream& operator<< (std::ostream &out, const Position &pos);
 
 
 #endif

@@ -23,17 +23,17 @@ clean:
 	@rm -f positions.o cat+mouse.o park.o animals.o cat+mouse
 
 
-# test1: cat+mouse test/test1.in.txt test/test1.out.txt
-# 	@test -z "`./cat+mouse -q < test/test1.in.txt | diff test/test1.out.txt -`"
-# 	@echo 'test 1 passed'
+test1: cat+mouse test/test1.in.txt test/test1.out.txt
+	@test -z "`./cat+mouse -q < test/test1.in.txt | diff test/test1.out.txt -`"
+	@echo 'test 1 passed'
 
 # test2: cat+mouse test/test2.in.txt test/test2.out.txt
 # 	@test -z "`./cat+mouse -q < test/test2.in.txt | diff test/test2.out.txt -`"
 # 	@echo 'test 1 passed'
 
 
-# check: test1 test2
-# 	@echo 'All test passed!'
+check: test1
+	@echo 'All test passed!'
 
 .PHONY: all clean check test1 test2
 

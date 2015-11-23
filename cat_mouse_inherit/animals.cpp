@@ -17,10 +17,12 @@ bool Cat::Chase() {
     } else {
         myPos.IncrementPosition2(-1, 0);
     }
-    return myTarget->Pos().IsBetween(old, myPos);
+    return myPos.IsAtStatue() && myTarget->Pos().IsBetween(old, myPos);
 }
 
 bool Person::Chase() {
+    if (!myTarget)
+        return false;
     if (!myPos.Sees(myTarget->Pos())) {
         myPos.IncrementPosition2(0, -2);
     }

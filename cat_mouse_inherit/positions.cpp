@@ -81,6 +81,6 @@ bool Position::operator== (Position coords) {
 }
 
 
-ostream& operator<< (ostream &out, Position &pos) {
+ostream& operator<< (ostream &out, const Position &pos) {
     return out << "Radius: " << pos.myRadius << ", Angle: " << pos.myAngleInRadians;
 }

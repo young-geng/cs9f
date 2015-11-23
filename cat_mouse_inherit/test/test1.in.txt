@@ -1,0 +1,15 @@
+cat
+CAT
+3.2
+0
+mouse
+MOUSE
+1
+-0.9948
+person
+PERSON
+4
+0
+MOUSE
+none
+none

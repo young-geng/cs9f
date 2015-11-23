@@ -1,0 +1,70 @@
+What kind of animal should be next? What is its name? What is its starting position?
+  radius =   angle in radians = What kind of animal should be next? What is its name? What is its starting position?
+  radius =   angle in radians = What kind of animal should be next? What is its name? What is its starting position?
+  radius =   angle in radians = Who is CAT chasing? Who is MOUSE chasing? *** not chasing anyone.
+Who is PERSON chasing? *** not chasing anyone.
+CAT position: Radius: 2.2, Angle: 0
+MOUSE position: Radius: 1, Angle: 0.00520008
+PERSON position: Radius: 4, Angle: 0
+
+CAT position: Radius: 1.2, Angle: 0
+MOUSE position: Radius: 1, Angle: 1.0052
+PERSON position: Radius: 4, Angle: 0
+
+CAT position: Radius: 1.2, Angle: 1.04167
+MOUSE position: Radius: 1, Angle: 2.0052
+PERSON position: Radius: 4, Angle: 0
+
+CAT position: Radius: 1.2, Angle: 2.08333
+MOUSE position: Radius: 1, Angle: 3.0052
+PERSON position: Radius: 4, Angle: 0
+
+CAT position: Radius: 1.2, Angle: 3.125
+MOUSE position: Radius: 1, Angle: 4.0052
+PERSON position: Radius: 4, Angle: 0
+
+CAT position: Radius: 1.2, Angle: 4.16667
+MOUSE position: Radius: 1, Angle: 5.0052
+PERSON position: Radius: 4, Angle: 0
+
+CAT position: Radius: 1.2, Angle: 5.20833
+MOUSE position: Radius: 1, Angle: 6.0052
+PERSON position: Radius: 4, Angle: 0
+
+CAT position: Radius: 1.2, Angle: 6.25
+MOUSE position: Radius: 1, Angle: 0.722015
+PERSON position: Radius: 4, Angle: 0
+
+CAT position: Radius: 1.2, Angle: 1.00848
+MOUSE position: Radius: 1, Angle: 1.72201
+PERSON position: Radius: 4, Angle: 0
+
+CAT position: Radius: 1.2, Angle: 2.05015
+MOUSE position: Radius: 1, Angle: 2.72201
+PERSON position: Radius: 4, Angle: 0
+
+CAT position: Radius: 1.2, Angle: 3.09181
+MOUSE position: Radius: 1, Angle: 3.72201
+PERSON position: Radius: 4, Angle: 0
+
+CAT position: Radius: 1.2, Angle: 4.13348
+MOUSE position: Radius: 1, Angle: 4.72201
+PERSON position: Radius: 4, Angle: 0
+
+CAT position: Radius: 1.2, Angle: 5.17515
+MOUSE position: Radius: 1, Angle: 5.72201
+PERSON position: Radius: 4, Angle: 0
+
+CAT position: Radius: 1, Angle: 5.17515
+MOUSE position: Radius: 1, Angle: 0.438829
+PERSON position: Radius: 4, Angle: 0
+
+CAT position: Radius: 1, Angle: 0.141962
+MOUSE position: Radius: 1, Angle: 1.43883
+PERSON position: Radius: 4, Angle: 0
+
+CAT position: Radius: 1, Angle: 1.39196
+MOUSE position: Radius: 1, Angle: 2.43883
+PERSON position: Radius: 4, Angle: 0
+
+CAT caught its target in step 17
