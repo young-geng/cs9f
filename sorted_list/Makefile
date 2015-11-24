@@ -28,4 +28,4 @@ test1: $(EXECUTABLE) $(subst, TEST_NAME, $@, $(TEST_IN_FILE)) $(subst, TEST_NAME
 check: test1
 	@echo 'All test passed!'
 
-.PHONY: clean all check
+.PHONY: clean all check test1
